@@ -1,0 +1,198 @@
+/* feature container */
+
+.featured {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-container {
+  max-width: 1125px;
+  margin-top: 30px;
+  min-height: 613px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  gap: 50px;
+}
+
+/* Text Section */
+.feature-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature-text h1 {
+  font-size: 2.2rem;
+  color: #222;
+}
+
+.feature-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.feature-text .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.feature-text button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.feature-text .btn-primary {
+  background: #f7b500;
+  color: #fff;
+}
+
+.feature-text .btn-primary:hover {
+  background: #e0a200;
+}
+
+.feature-text .btn-secondary {
+  background: #fff;
+  color: #f7b500;
+  border: 1px solid #f7b500;
+}
+
+.feature-text .btn-secondary:hover {
+  background: #f7b500;
+  color: #fff;
+}
+
+/* Image Section */
+.feature-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-item img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  padding: 10px;
+  object-fit: cover;
+}
+
+/* ✅ Responsive */
+@media (max-width: 992px) {
+  .feature-container {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .feature-text {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .feature-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .feature-text p {
+    font-size: 1rem;
+  }
+
+  .feature-item img {
+    max-width: 400px;
+    height: auto;
+  }
+
+   .moreInfo{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .feature-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .feature-text p {
+    font-size: 0.95rem;
+  }
+
+  .feature-item img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .feature-text .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .feature-text button {
+    width: 100%;
+  }
+
+  .moreInfo{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+
+
+
+
+
+/* feature more info */
+/* Other CSS rules... */
+
+.feature-text .moreInfo {
+    margin-top: 20px; /* Adds space above the new section */
+    border-top: 1px solid #ddd; /* Separates the new section visually */
+    padding-top: 20px; /* Adds padding inside the new section */
+    text-decoration: none;
+    text-align: left;
+}
+
+.feature-text .moreInfo p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.feature-text .moreInfo ol {
+    list-style-type:disc ;
+    padding-left: 0;
+    margin-left: 0;
+    color: #555;
+}
+
+.feature-text .moreInfo li {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+
+

@@ -1,0 +1,139 @@
+/* ===== Navbar Base ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .menu ul li {
+  margin: 0 15px;
+}
+
+.navbar .menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.navbar .menu ul li a:hover {
+  text-decoration: underline;
+  color: #f7b500;
+}
+
+/* ===== Login Button ===== */
+.navbar .login {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.navbar .login button {
+  padding: 6.5px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f7b500;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.navbar .login button:hover {
+  background-color: #e0a200;
+}
+
+/* ===== Toggle Button (hidden by default) ===== */
+.navbar .toggleBtn {
+  justify-content: center;
+  display: none;
+  cursor: pointer;
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+}
+
+.logo{
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ===== Mobile Styles ===== */
+@media screen and (max-width: 768px) {
+  /* Hide desktop menu by default */
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Show menu when active */
+  @media screen and (max-width: 768px) {
+  /* Show menu when active */
+  .navbar .menu.active {
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    margin: 0; /* Add this line to fix the margin issue on active state */
+  }
+}
+
+  .navbar .menu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar .menu ul li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  /* Hide login on mobile (optional) */
+  .navbar .login {
+    display: block;
+  }
+
+  /* Show toggle button on mobile */
+  .navbar .toggleBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+}
